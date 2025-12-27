@@ -1,0 +1,28 @@
+# Sample Property Analysis
+# Run: python app.py
+
+# Example 1: Check if Ajah property at ₦45M is worth it
+Location: Ajah
+Price: 45000000
+Expected Result: HIGH RISK due to 85% flood score
+
+# Example 2: Analyze premium Ikoyi property
+Location: Ikoyi
+Price: 400000000
+Expected Result: EXCELLENT - Low risk, high ROI
+
+# Example 3: Calculate ROI for Lekki investment
+Location: Lekki Phase 1
+Price: 120000000
+Holding Period: 5 years
+Expected ROI: ~87% (EXCELLENT)
+
+# Example 4: Compare Surulere vs Victoria Island
+Location 1: Surulere (Smart Score: ~59)
+Location 2: Victoria Island (Smart Score: ~89)
+Price difference: VI costs 3x more but 50% safer
+
+# Example 5: Abuja analysis - Maitama vs Gwarinpa
+Location 1: Maitama (Premium - Smart Score: 88.9)
+Location 2: Gwarinpa (Middle-class - Smart Score: 75.5)
+Both: No Omo Onile (Federal land)

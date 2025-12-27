@@ -1,0 +1,366 @@
+{
+  "comment": "Nigerian Property Intelligence Database - Lagos & Abuja Zones",
+  "last_updated": "2025-12-27",
+  "zones": {
+    "Ajah": {
+      "location": "Ajah, Lagos (Eti-Osa LGA)",
+      "coordinates": {"lat": 6.4698, "lng": 3.5852},
+      "flood_risk": {
+        "score": 85,
+        "level": "HIGH",
+        "last_major_flood": "July 2022",
+        "rainy_season_danger": "June-October",
+        "drainage_quality": "Poor",
+        "affected_streets": ["Badore Road", "Langbasa", "Abraham Adesanya"]
+      },
+      "security": {
+        "score": 55,
+        "level": "MODERATE",
+        "police_stations": 2,
+        "robbery_incidents_2024": 47,
+        "safe_hours": "6am-9pm",
+        "vigilante_presence": true
+      },
+      "infrastructure": {
+        "score": 45,
+        "road_quality": 40,
+        "power_hours_per_day": 8,
+        "water_source": "Borehole (150-200ft depth)",
+        "fiber_internet": false,
+        "mobile_network": "Good (4G)",
+        "waste_management": "Private"
+      },
+      "market_data": {
+        "avg_price_per_sqm": 120000,
+        "price_range": "₦25M - ₦60M (3-bedroom)",
+        "5yr_appreciation": 0.15,
+        "rental_yield": 0.06,
+        "days_to_sell_avg": 180,
+        "demand_level": "High"
+      },
+      "hidden_costs": {
+        "omo_onile": 1500000,
+        "land_survey": 300000,
+        "flood_insurance": 150000,
+        "generator_diesel_monthly": 80000,
+        "borehole_maintenance": 50000
+      },
+      "notes": "Fast-developing area. Flood risk reduces property value by 15-20%. Negotiate hard."
+    },
+    "Lekki Phase 1": {
+      "location": "Lekki Phase 1, Lagos (Eti-Osa LGA)",
+      "coordinates": {"lat": 6.4334, "lng": 3.4739},
+      "flood_risk": {
+        "score": 45,
+        "level": "MODERATE",
+        "last_major_flood": "2018",
+        "rainy_season_danger": "July-September",
+        "drainage_quality": "Fair",
+        "affected_streets": ["Admiralty Way (low-lying sections)"]
+      },
+      "security": {
+        "score": 75,
+        "level": "GOOD",
+        "police_stations": 3,
+        "robbery_incidents_2024": 18,
+        "safe_hours": "24/7",
+        "vigilante_presence": true
+      },
+      "infrastructure": {
+        "score": 70,
+        "road_quality": 70,
+        "power_hours_per_day": 16,
+        "water_source": "Estate supply + Borehole",
+        "fiber_internet": true,
+        "mobile_network": "Excellent (4G/5G)",
+        "waste_management": "Estate-managed"
+      },
+      "market_data": {
+        "avg_price_per_sqm": 350000,
+        "price_range": "₦80M - ₦200M (3-bedroom)",
+        "5yr_appreciation": 0.25,
+        "rental_yield": 0.05,
+        "days_to_sell_avg": 90,
+        "demand_level": "Very High"
+      },
+      "hidden_costs": {
+        "omo_onile": 500000,
+        "land_survey": 400000,
+        "flood_insurance": 80000,
+        "generator_diesel_monthly": 40000,
+        "estate_service_charge": 150000
+      },
+      "notes": "Prime location. High demand. Prices stable but expensive. Good for rental income."
+    },
+    "Victoria Island": {
+      "location": "Victoria Island, Lagos",
+      "coordinates": {"lat": 6.4281, "lng": 3.4219},
+      "flood_risk": {
+        "score": 25,
+        "level": "LOW",
+        "last_major_flood": "N/A (Rare)",
+        "rainy_season_danger": "Minimal",
+        "drainage_quality": "Excellent",
+        "affected_streets": []
+      },
+      "security": {
+        "score": 90,
+        "level": "EXCELLENT",
+        "police_stations": 5,
+        "robbery_incidents_2024": 8,
+        "safe_hours": "24/7",
+        "vigilante_presence": false
+      },
+      "infrastructure": {
+        "score": 95,
+        "road_quality": 90,
+        "power_hours_per_day": 22,
+        "water_source": "Municipal + Estate",
+        "fiber_internet": true,
+        "mobile_network": "Excellent (5G)",
+        "waste_management": "Government + Private"
+      },
+      "market_data": {
+        "avg_price_per_sqm": 800000,
+        "price_range": "₦200M - ₦500M (3-bedroom)",
+        "5yr_appreciation": 0.20,
+        "rental_yield": 0.04,
+        "days_to_sell_avg": 45,
+        "demand_level": "Extreme"
+      },
+      "hidden_costs": {
+        "omo_onile": 0,
+        "land_survey": 500000,
+        "flood_insurance": 0,
+        "generator_diesel_monthly": 10000,
+        "estate_service_charge": 300000
+      },
+      "notes": "Premium location. Institutional investors active. Low rental yield but high capital appreciation."
+    },
+    "Ikoyi": {
+      "location": "Ikoyi, Lagos",
+      "coordinates": {"lat": 6.4541, "lng": 3.4316},
+      "flood_risk": {
+        "score": 20,
+        "level": "LOW",
+        "last_major_flood": "N/A",
+        "rainy_season_danger": "Minimal",
+        "drainage_quality": "Excellent",
+        "affected_streets": []
+      },
+      "security": {
+        "score": 95,
+        "level": "EXCELLENT",
+        "police_stations": 4,
+        "robbery_incidents_2024": 5,
+        "safe_hours": "24/7",
+        "vigilante_presence": false
+      },
+      "infrastructure": {
+        "score": 98,
+        "road_quality": 95,
+        "power_hours_per_day": 23,
+        "water_source": "Municipal (Reliable)",
+        "fiber_internet": true,
+        "mobile_network": "Excellent (5G)",
+        "waste_management": "Government"
+      },
+      "market_data": {
+        "avg_price_per_sqm": 1200000,
+        "price_range": "₦300M - ₦1B (3-bedroom)",
+        "5yr_appreciation": 0.18,
+        "rental_yield": 0.035,
+        "days_to_sell_avg": 30,
+        "demand_level": "Extreme"
+      },
+      "hidden_costs": {
+        "omo_onile": 0,
+        "land_survey": 600000,
+        "flood_insurance": 0,
+        "generator_diesel_monthly": 5000,
+        "estate_service_charge": 400000
+      },
+      "notes": "Old money neighborhood. Ultra-premium. Lowest risk in Lagos. Best for capital preservation."
+    },
+    "Surulere": {
+      "location": "Surulere, Lagos (Surulere LGA)",
+      "coordinates": {"lat": 6.4969, "lng": 3.3535},
+      "flood_risk": {
+        "score": 50,
+        "level": "MODERATE",
+        "last_major_flood": "2020",
+        "rainy_season_danger": "June-September",
+        "drainage_quality": "Fair",
+        "affected_streets": ["Bode Thomas", "Adeniran Ogunsanya (sections)"]
+      },
+      "security": {
+        "score": 65,
+        "level": "MODERATE",
+        "police_stations": 4,
+        "robbery_incidents_2024": 32,
+        "safe_hours": "6am-10pm",
+        "vigilante_presence": true
+      },
+      "infrastructure": {
+        "score": 60,
+        "road_quality": 55,
+        "power_hours_per_day": 12,
+        "water_source": "Borehole + Municipal",
+        "fiber_internet": true,
+        "mobile_network": "Good (4G)",
+        "waste_management": "Government + Private"
+      },
+      "market_data": {
+        "avg_price_per_sqm": 180000,
+        "price_range": "₦35M - ₦80M (3-bedroom)",
+        "5yr_appreciation": 0.12,
+        "rental_yield": 0.07,
+        "days_to_sell_avg": 120,
+        "demand_level": "Moderate"
+      },
+      "hidden_costs": {
+        "omo_onile": 800000,
+        "land_survey": 350000,
+        "flood_insurance": 100000,
+        "generator_diesel_monthly": 60000,
+        "borehole_maintenance": 40000
+      },
+      "notes": "Mature neighborhood. Good rental income. Mixed-use area. Traffic congestion during rush hour."
+    },
+    "Maitama": {
+      "location": "Maitama, Abuja (FCT)",
+      "coordinates": {"lat": 9.0820, "lng": 7.4951},
+      "flood_risk": {
+        "score": 15,
+        "level": "LOW",
+        "last_major_flood": "N/A",
+        "rainy_season_danger": "Minimal",
+        "drainage_quality": "Excellent",
+        "affected_streets": []
+      },
+      "security": {
+        "score": 92,
+        "level": "EXCELLENT",
+        "police_stations": 3,
+        "robbery_incidents_2024": 6,
+        "safe_hours": "24/7",
+        "vigilante_presence": false
+      },
+      "infrastructure": {
+        "score": 90,
+        "road_quality": 88,
+        "power_hours_per_day": 20,
+        "water_source": "Municipal (Reliable)",
+        "fiber_internet": true,
+        "mobile_network": "Excellent (4G/5G)",
+        "waste_management": "Government"
+      },
+      "market_data": {
+        "avg_price_per_sqm": 900000,
+        "price_range": "₦250M - ₦600M (3-bedroom)",
+        "5yr_appreciation": 0.22,
+        "rental_yield": 0.045,
+        "days_to_sell_avg": 50,
+        "demand_level": "Very High"
+      },
+      "hidden_costs": {
+        "omo_onile": 0,
+        "land_survey": 500000,
+        "flood_insurance": 0,
+        "generator_diesel_monthly": 15000,
+        "estate_service_charge": 250000
+      },
+      "notes": "Abuja's premium district. Diplomats and executives. Federal land (no Omo Onile). Stable prices."
+    },
+    "Gwarinpa": {
+      "location": "Gwarinpa, Abuja (FCT)",
+      "coordinates": {"lat": 9.1155, "lng": 7.4103},
+      "flood_risk": {
+        "score": 30,
+        "level": "LOW",
+        "last_major_flood": "N/A",
+        "rainy_season_danger": "Low",
+        "drainage_quality": "Good",
+        "affected_streets": []
+      },
+      "security": {
+        "score": 80,
+        "level": "GOOD",
+        "police_stations": 2,
+        "robbery_incidents_2024": 12,
+        "safe_hours": "24/7",
+        "vigilante_presence": true
+      },
+      "infrastructure": {
+        "score": 75,
+        "road_quality": 72,
+        "power_hours_per_day": 18,
+        "water_source": "Municipal + Borehole",
+        "fiber_internet": true,
+        "mobile_network": "Good (4G)",
+        "waste_management": "Government"
+      },
+      "market_data": {
+        "avg_price_per_sqm": 250000,
+        "price_range": "₦60M - ₦150M (3-bedroom)",
+        "5yr_appreciation": 0.18,
+        "rental_yield": 0.055,
+        "days_to_sell_avg": 75,
+        "demand_level": "High"
+      },
+      "hidden_costs": {
+        "omo_onile": 0,
+        "land_survey": 400000,
+        "flood_insurance": 0,
+        "generator_diesel_monthly": 30000,
+        "estate_service_charge": 100000
+      },
+      "notes": "Largest estate in West Africa. Family-friendly. Good middle-class investment. Federal land."
+    },
+    "Ikeja GRA": {
+      "location": "Ikeja GRA, Lagos (Ikeja LGA)",
+      "coordinates": {"lat": 6.5964, "lng": 3.3486},
+      "flood_risk": {
+        "score": 35,
+        "level": "LOW",
+        "last_major_flood": "N/A",
+        "rainy_season_danger": "Low",
+        "drainage_quality": "Good",
+        "affected_streets": []
+      },
+      "security": {
+        "score": 85,
+        "level": "EXCELLENT",
+        "police_stations": 3,
+        "robbery_incidents_2024": 10,
+        "safe_hours": "24/7",
+        "vigilante_presence": true
+      },
+      "infrastructure": {
+        "score": 82,
+        "road_quality": 80,
+        "power_hours_per_day": 18,
+        "water_source": "Municipal + Borehole",
+        "fiber_internet": true,
+        "mobile_network": "Excellent (4G/5G)",
+        "waste_management": "Government"
+      },
+      "market_data": {
+        "avg_price_per_sqm": 450000,
+        "price_range": "₦100M - ₦250M (3-bedroom)",
+        "5yr_appreciation": 0.16,
+        "rental_yield": 0.05,
+        "days_to_sell_avg": 60,
+        "demand_level": "High"
+      },
+      "hidden_costs": {
+        "omo_onile": 300000,
+        "land_survey": 400000,
+        "flood_insurance": 0,
+        "generator_diesel_monthly": 35000,
+        "estate_service_charge": 180000
+      },
+      "notes": "Government Reservation Area. Corporate executives. Near airport. Stable and secure."
+    }
+  }
+}
