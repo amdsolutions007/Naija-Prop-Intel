@@ -4,14 +4,21 @@
   "zones": {
     "Ajah": {
       "location": "Ajah, Lagos (Eti-Osa LGA)",
-      "coordinates": {"lat": 6.4698, "lng": 3.5852},
+      "coordinates": {
+        "lat": 6.4675,
+        "lng": 3.5687
+      },
       "flood_risk": {
         "score": 85,
         "level": "HIGH",
         "last_major_flood": "July 2022",
         "rainy_season_danger": "June-October",
         "drainage_quality": "Poor",
-        "affected_streets": ["Badore Road", "Langbasa", "Abraham Adesanya"]
+        "affected_streets": [
+          "Badore Road",
+          "Langbasa",
+          "Abraham Adesanya"
+        ]
       },
       "security": {
         "score": 55,
@@ -49,14 +56,19 @@
     },
     "Lekki Phase 1": {
       "location": "Lekki Phase 1, Lagos (Eti-Osa LGA)",
-      "coordinates": {"lat": 6.4334, "lng": 3.4739},
+      "coordinates": {
+        "lat": 6.4378,
+        "lng": 3.473
+      },
       "flood_risk": {
         "score": 45,
         "level": "MODERATE",
         "last_major_flood": "2018",
         "rainy_season_danger": "July-September",
         "drainage_quality": "Fair",
-        "affected_streets": ["Admiralty Way (low-lying sections)"]
+        "affected_streets": [
+          "Admiralty Way (low-lying sections)"
+        ]
       },
       "security": {
         "score": 75,
@@ -94,7 +106,10 @@
     },
     "Victoria Island": {
       "location": "Victoria Island, Lagos",
-      "coordinates": {"lat": 6.4281, "lng": 3.4219},
+      "coordinates": {
+        "lat": 6.4281,
+        "lng": 3.4219
+      },
       "flood_risk": {
         "score": 25,
         "level": "LOW",
@@ -123,7 +138,7 @@
       "market_data": {
         "avg_price_per_sqm": 800000,
         "price_range": "₦200M - ₦500M (3-bedroom)",
-        "5yr_appreciation": 0.20,
+        "5yr_appreciation": 0.2,
         "rental_yield": 0.04,
         "days_to_sell_avg": 45,
         "demand_level": "Extreme"
@@ -139,7 +154,10 @@
     },
     "Ikoyi": {
       "location": "Ikoyi, Lagos",
-      "coordinates": {"lat": 6.4541, "lng": 3.4316},
+      "coordinates": {
+        "lat": 6.4549,
+        "lng": 3.4316
+      },
       "flood_risk": {
         "score": 20,
         "level": "LOW",
@@ -184,14 +202,20 @@
     },
     "Surulere": {
       "location": "Surulere, Lagos (Surulere LGA)",
-      "coordinates": {"lat": 6.4969, "lng": 3.3535},
+      "coordinates": {
+        "lat": 6.4969,
+        "lng": 3.3558
+      },
       "flood_risk": {
         "score": 50,
         "level": "MODERATE",
         "last_major_flood": "2020",
         "rainy_season_danger": "June-September",
         "drainage_quality": "Fair",
-        "affected_streets": ["Bode Thomas", "Adeniran Ogunsanya (sections)"]
+        "affected_streets": [
+          "Bode Thomas",
+          "Adeniran Ogunsanya (sections)"
+        ]
       },
       "security": {
         "score": 65,
@@ -229,7 +253,10 @@
     },
     "Maitama": {
       "location": "Maitama, Abuja (FCT)",
-      "coordinates": {"lat": 9.0820, "lng": 7.4951},
+      "coordinates": {
+        "lat": 9.082,
+        "lng": 7.4897
+      },
       "flood_risk": {
         "score": 15,
         "level": "LOW",
@@ -274,7 +301,10 @@
     },
     "Gwarinpa": {
       "location": "Gwarinpa, Abuja (FCT)",
-      "coordinates": {"lat": 9.1155, "lng": 7.4103},
+      "coordinates": {
+        "lat": 9.1167,
+        "lng": 7.4083
+      },
       "flood_risk": {
         "score": 30,
         "level": "LOW",
@@ -319,7 +349,10 @@
     },
     "Ikeja GRA": {
       "location": "Ikeja GRA, Lagos (Ikeja LGA)",
-      "coordinates": {"lat": 6.5964, "lng": 3.3486},
+      "coordinates": {
+        "lat": 6.5964,
+        "lng": 3.3515
+      },
       "flood_risk": {
         "score": 35,
         "level": "LOW",

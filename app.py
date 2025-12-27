@@ -2,12 +2,18 @@
 Naija-Prop-Intel: Property Intelligence CLI
 © 2025 AMD Solutions. All Rights Reserved.
 
-Interactive CLI for Nigerian property analysis
+Interactive CLI for Nigerian property analysis with:
+- Property risk analysis
+- ROI calculator
+- Agent network registration
+- Google Maps satellite view
 """
 
 import sys
 import os
 from analyzer import PropertyAnalyzer
+from agents import AgentNetwork
+from maps import MapsIntegration
 
 
 def print_banner():
@@ -255,19 +261,181 @@ def calculate_roi_interactive(analyzer: PropertyAnalyzer):
     print_section("📈 MARKET CONTEXT")
     market = result['market_context']
     print(f"\nDays to Sell: {market['days_to_sell']} days")
-    print(f"Demand Level: {market['demand_level']}")
-    print(f"Liquidity: {market['liquidity']}")
+    agent_registration_interactive(network: AgentNetwork):
+    """Interactive agent registration"""
+    print_section("👤 AGENT REGISTRATION")
     
-    print("\n" + "═" * 60)
+    print("\n💼 Real Estate Agent Network")
+    print("Join Nigeria's premier property intelligence network\n")
+    
+    name = input("Full Name: ").strip()
+    email = input("Email Address: ").strip()
+    phone = input("Phone Number: ").strip()
+    company = input("Company Name (or 'Independent'): ").strip() or "Independent"
+    specialization = input("Specialization (Residential/Commercial/Land): ").strip() or "Residential"
+    
+    print("\n🔄 Registering agent...")
+    result = network.register_agent(name, email, phone, company, specialization)
+    
+    if 'error' in result:
+        print(f"\n❌ {result['error']}")
+        if 'agent_id' in result:
+            print(f"Existing Agent ID: {result['agent_id']}")
+            print(f"Status: {result['status']}")
+    else:
+        print(f"\n{result['message']}")
+
+
+def verify_agent_interactive(network: AgentNetwork):
+    """Interactive agent verification"""
+    print_section("✅ AGENT VERIFICATION")
+    
+    print("\n💳 ₦5,000 Verification Badge Payment\n")
+    
+    agent_id = input("Agent ID: ").strip()
+    payment_proof = input("Payment Reference (Bank/Paystack): ").strip()
+    
+    print("\n🔄 Verifying payment...")
+    result = network.verify_agent(agent_id, payment_proof, 5000.0)
+    
+    if 'error' in result:
+        print(f"\n❌ {result['error']}")
+    else:
+        print(f"\n{result['message']}")
+
+
+def post_listing_interactive(network: AgentNetwork):
+    """Interactive listing posting"""
+    print_section("🏠 POST PROPERTY LISTING")
+    
+    print("\n📢 Broadcast to verified agents network\n")
+    
+    agent_id = input("Agent ID: ").strip()
+    location = input("Location: ").strip()
+    
+    try:
+        price_input = input("Price (₦): ").strip().replace(',', '').replace('₦', '')
+        price = float(price_input)
+    except ValueError:
+        print("❌ Invalid price format")
+        return
+    
+    property_type = input("Property Type (e.g., 3-bedroom duplex): ").strip()
+    bedrooms = input("Bedrooms: ").strip()
+    bathrooms = input("Bathrooms: ").strip()
+    description = input("Description: ").strip()
+    contact = input("Contact Phone: ").strip()
+    
+    property_details = {
+        "location": location,
+        "price": price,
+        "property_type": property_type,
+        "bedrooms": bedrooms,
+        "bathrooms": bathrooms,
+        "description": description,
+        "contact": contact
+    }
+    
+    print("\n🔄 Posting listing...")
+    result = network.post_listing(agent_id, property_details)
+    
+    if 'error' in result:
+        print(f"\n❌ {result['error']}")
+        if 'message' in result:
+            print(result['message'])
+    else:
+        print(result['broadcast'])
+        print(f"\n📊 Reach: {result['reach']}")
+
+
+def view_maps_interactive(maps: MapsIntegration, analyzer: PropertyAnalyzer):
+    """Interactive maps viewer"""
+    print_section("🗺️  GOOGLE MAPS SATELLITE VIEW")
+    
+    locations = analyzer.get_available_locations()
+    print("\n📍 Available Locations:")
+    for i, loc in enumerate(locations, 1):
+        print(f"  {i}. {loc}")
+    
+    print("\n" + "─" * 60)
+    location = input("Enter location name (or number): ").strip()
+    
+    # Handle numeric input
+    if location.isdigit():
+        idx = int(location) - 1
+        if 0 <= idx < len(locations):
+            location = locations[idx]
+        else:
+            print("❌ Invalid location number")
+            return
+    
+    # Get coordinates
+    coords = maps.get_coordinates(location)
+    if coords:
+        print(f"\n📍 GPS Coordinates:")
+        print(f"   Latitude: {coords['latitude']}")
+        print(f"   Longitude: {coords['longitude']}")
+    
+    # Open satellite view
+    print("\n🛰️  Opening Google Maps satellite view...")
+    result = maps.open_satellite_view(location, zoom_level=17)
+    
+    if 'error' in result:
+        print(f"\n❌ {result['error']}")
+    else:
+        print(f"\n{result['status']}")
+        print(f"🌐 URL: {result['satellite_url']}")
+        print("\n💡 View high-resolution satellite imagery of the property area")
+        print("   Check for: flood zones, drainage, road access, neighbors")
+
+
+def calculate_distance_interactive(maps: MapsIntegration, analyzer: PropertyAnalyzer):
+    """Calculate distance between locations"""
+    print_section("📏 DISTANCE CALCULATOR")
+    
+    locations = analyzer.get_available_locations()
+    print("\n📍 Available Locations:")
+    for i, loc in enumerate(locations, 1):
+        print(f"  {i}. {loc}")
+    
+    print("\n" + "─" * 60)
+    location1 = input("From (location or number): ").strip()
+    location2 = input("To (location or number): ").strip()
+    
+    # Handle numeric inputs
+    for var_name, value in [('location1', location1), ('location2', location2)]:
+        if value.isdigit():
+            idx = int(value) - 1
+            if 0 <= idx < len(locations):
+                if var_name == 'location1':
+                    location1 = locations[idx]
+                else:
+                    location2 = locations[idx]
+    
+    distance = maps.calculate_distance(location1, location2)
+    
+    if distance:
+        print(f"\n📍 From: {distance['from']}")
+        print(f"📍 To: {distance['to']}")
+        print(f"📏 Distance: {distance['distance_km']} km ({distance['distance_miles']} miles)")
+        
+        # Estimate travel time (assuming Lagos traffic)
+        travel_time_hours = distance['distance_km'] / 15  # Average 15km/h in Lagos traffic
+        print(f"🚗 Estimated Travel Time: {travel_time_hours:.1f} hours (Lagos traffic)")
+    else:
+        print("\n❌ Could not calculate distance")
 
 
 def main():
     """Main CLI application"""
     print_banner()
     
-    # Initialize analyzer
+    # Initialize components
     try:
         analyzer = PropertyAnalyzer()
+        network = AgentNetwork()
+        maps = MapsIntegration()
+        print("\n✅ All systems initialized\n")
     except FileNotFoundError as e:
         print(f"\n❌ ERROR: {e}")
         print("\nPlease ensure the data/zones.json file exists.")
@@ -279,21 +447,44 @@ def main():
         print("═" * 60)
         print("1. 🏠 Analyze Property (Risk + Price)")
         print("2. 💰 Calculate ROI (Investment Returns)")
-        print("3. 📍 List Available Locations")
-        print("4. ❌ Exit")
+        print("3. 🗺️  View Satellite Maps (Google Maps)")
+        print("4. 📏 Calculate Distance Between Locations")
+        print("5. 👤 Agent Registration (₦5,000 Badge)")
+        print("6. ✅ Verify Agent Payment")
+        print("7. 📢 Post Property Listing (Agents Only)")
+        print("8. 📍 List Available Locations")
+        print("9. ❌ Exit")
         
-        choice = input("\nSelect option (1-4): ").strip()
+        choice = input("\nSelect option (1-9): ").strip()
         
         if choice == "1":
             analyze_property_interactive(analyzer)
         elif choice == "2":
             calculate_roi_interactive(analyzer)
         elif choice == "3":
+            view_maps_interactive(maps, analyzer)
+        elif choice == "4":
+            calculate_distance_interactive(maps, analyzer)
+        elif choice == "5":
+            agent_registration_interactive(network)
+        elif choice == "6":
+            verify_agent_interactive(network)
+        elif choice == "7":
+            post_listing_interactive(network)
+        elif choice == "8":
             print_section("📍 AVAILABLE LOCATIONS")
             locations = analyzer.get_available_locations()
             for i, loc in enumerate(locations, 1):
-                print(f"  {i}. {loc}")
-        elif choice == "4":
+                coords = maps.get_coordinates(loc)
+                coord_str = f"({coords['latitude']}, {coords['longitude']})" if coords else ""
+                print(f"  {i}. {loc} {coord_str}")
+        elif choice == "9":
+            print("\n👋 Thank you for using Naija-Prop-Intel!")
+            print("💡 Save millions on your next property deal.")
+            print("\n© 2025 AMD Solutions - Licensed Software")
+            break
+        else:
+            print("\n❌ Invalid option. Please select 1-9
             print("\n👋 Thank you for using Naija-Prop-Intel!")
             print("💡 Save millions on your next property deal.")
             print("\n© 2025 AMD Solutions - Licensed Software")

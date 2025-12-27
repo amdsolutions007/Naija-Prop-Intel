@@ -61,9 +61,89 @@ ROI = ((Rental Income × Years) + Capital Gain - Hidden Costs) / Price × 100
 - ✅ Hidden costs breakdown (Omo Onile, generator, survey fees)
 - ✅ Liquidity score (days to sell)
 
-#### 🗺️ 3. Nigerian Intelligence Database
+#### 🗺️ 3. Google Maps Satellite Integration
+**NEW IN v0.1.0**
+
+**What You Get:**
+- ✅ High-resolution satellite imagery for all properties
+- ✅ GPS coordinates (latitude/longitude) for 8 locations
+- ✅ Distance calculator between locations (with Lagos traffic estimates)
+- ✅ Directions generator (driving, walking, transit)
+- ✅ Street View URLs for ground-level property inspection
+- ✅ Embed codes for websites
+
+**How It Works:**
+```python
+from maps import MapsIntegration
+
+maps = MapsIntegration()
+
+# Open satellite view in browser
+maps.open_satellite_view("Lekki Phase 1", zoom_level=17)
+
+# Get GPS coordinates
+coords = maps.get_coordinates("Victoria Island")
+print(f"Lat: {coords['latitude']}, Lng: {coords['longitude']}")
+
+# Calculate distance
+distance = maps.calculate_distance("Ajah", "Ikoyi")
+print(f"Distance: {distance['distance_km']} km")
+```
+
+#### 👥 4. Agent Network & Verification System
+**NEW IN v0.1.0**
+
+**For Real Estate Agents:**
+- ✅ Register as verified agent (₦5,000 one-time badge fee)
+- ✅ Post property listings to network
+- ✅ Receive buyer leads and inquiries
+- ✅ 2.5% commission on closed deals
+- ✅ Lifetime access (no recurring fees)
+
+**How It Works:**
+```python
+from agents import AgentNetwork
+
+network = AgentNetwork()
+
+# Register agent
+result = network.register_agent(
+    name="Chukwudi Okafor",
+    email="chukwudi@realestate.ng",
+    phone="08012345678",
+    company="Lagos Prime Properties"
+)
+
+# Verify payment (₦5,000 badge)
+network.verify_agent(
+    agent_id=result['agent_id'],
+    payment_proof="GTB-20251227-123456",
+    payment_amount=5000.0
+)
+
+# Post listing (verified agents only)
+network.post_listing(
+    agent_id=result['agent_id'],
+    property_details={
+        "location": "Lekki Phase 1",
+        "price": 45_000_000,
+        "property_type": "4-bedroom Detached Duplex",
+        "bedrooms": 4,
+        "bathrooms": 5,
+        "description": "Luxurious duplex with pool...",
+        "contact": "08012345678"
+    }
+)
+```
+
+**Payment Options:**
+- Bank Transfer: GTBank 0123456789 (AMD Solutions)
+- Paystack: pay.amdsolutions007.com/agent-badge
+
+#### 📊 5. Nigerian Intelligence Database
 - **8 Premium Locations**: Victoria Island, Ikoyi, Lekki, Maitama, etc.
 - **Real Data**: Flood history, power hours/day, Omo Onile fees by area
+- **GPS Coordinates**: Precise lat/lng for satellite verification
 - **Market Intelligence**: Price ranges, rental yields, demand levels
 
 ---
@@ -110,6 +190,22 @@ cd Naija-Prop-Intel
 
 # Run interactive CLI
 python app.py
+```
+
+### Interactive Menu
+
+When you run `python app.py`, you'll see:
+
+```
+1. 🏠 Analyze Property (Risk + Price)
+2. 💰 Calculate ROI (Investment Returns)
+3. 🗺️  View Satellite Maps (Google Maps)
+4. 📏 Calculate Distance Between Locations
+5. 👤 Agent Registration (₦5,000 Badge)
+6. ✅ Verify Agent Payment
+7. 📢 Post Property Listing (Agents Only)
+8. 📍 List Available Locations
+9. ❌ Exit
 ```
 
 ### Sample Analysis
