@@ -2,7 +2,8 @@
 # © 2025 AMD Solutions. All Rights Reserved.
 
 # Core dependencies
-googlemaps>=4.10.0  # Google Maps API integration (Week 2)
+googlemaps>=4.10.0
+twilio>=8.10.0  # Google Maps API integration (Week 2)
 
 # Optional dependencies for future enhancements:
 # reportlab>=4.0.0  # For PDF report generation
