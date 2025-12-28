@@ -1,11 +1,8 @@
 # Naija-Prop-Intel Dependencies
 # © 2025 AMD Solutions. All Rights Reserved.
 
-# Core dependencies (lightweight - no external APIs required)
-# All processing done locally with zones.json database
-
-# No external dependencies required for core functionality
-# Python 3.8+ standard library sufficient
+# Core dependencies
+googlemaps>=4.10.0  # Google Maps API integration (Week 2)
 
 # Optional dependencies for future enhancements:
 # reportlab>=4.0.0  # For PDF report generation
