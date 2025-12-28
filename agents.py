@@ -349,6 +349,98 @@ Posted: {datetime.now().strftime('%Y-%m-%d %I:%M %p')}
             results.append(listing)
         
         return sorted(results, key=lambda x: x['posted_date'], reverse=True)
+    
+    def broadcast_urgent_request(
+        self,
+        request_message: str,
+        requester_name: str,
+        requester_contact: str,
+        budget: Optional[float] = None,
+        location: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """
+        Broadcast urgent property request to all verified agents
+        
+        Legacy feature: Notify agents of urgent buyer requests
+        
+        Args:
+            request_message: Urgent request message (e.g., "Need 3-bedroom in Ajah ASAP")
+            requester_name: Name of person making request
+            requester_contact: Phone/email contact
+            budget: Budget (optional)
+            location: Preferred location (optional)
+        
+        Returns:
+            Dict with broadcast results and notified agents count
+        """
+        # Create urgent request record
+        request_id = f"URG-{uuid.uuid4().hex[:8].upper()}"
+        timestamp = datetime.now().isoformat()
+        
+        urgent_request = {
+            "request_id": request_id,
+            "message": request_message,
+            "requester": {
+                "name": requester_name,
+                "contact": requester_contact
+            },
+            "details": {
+                "budget": budget,
+                "location": location
+            },
+            "created_at": timestamp,
+            "status": "active"
+        }
+        
+        # Store request
+        if "urgent_requests" not in self.agents_db:
+            self.agents_db["urgent_requests"] = {}
+        
+        self.agents_db["urgent_requests"][request_id] = urgent_request
+        
+        # Get all verified agents
+        verified_agents = [
+            agent for agent in self.agents_db['agents'].values()
+            if agent['verification_badge']
+        ]
+        
+        # Format broadcast message
+        budget_text = f"Budget: ₦{budget:,.0f}" if budget else "Budget: Flexible"
+        location_text = f"Location: {location}" if location else "Location: Negotiable"
+        
+        broadcast = f"""
+🚨 URGENT PROPERTY REQUEST 🚨
+
+Request ID: {request_id}
+{request_message}
+
+Client Details:
+👤 Name: {requester_name}
+📞 Contact: {requester_contact}
+💰 {budget_text}
+📍 {location_text}
+
+⏰ Timestamp: {timestamp}
+
+📢 Verified agents notified: {len(verified_agents)}
+
+ACTION REQUIRED:
+If you have matching properties, contact client immediately!
+
+© Naija-Prop-Intel Agent Network
+"""
+        
+        # Save updated database
+        self._save_database()
+        
+        return {
+            "success": True,
+            "request_id": request_id,
+            "message": f"✅ Urgent request broadcasted to {len(verified_agents)} verified agents",
+            "broadcast": broadcast,
+            "notified_count": len(verified_agents),
+            "timestamp": timestamp
+        }
 
 
 def test_agent_network():
@@ -407,6 +499,20 @@ def test_agent_network():
     print(f"Total Agents: {stats['total_agents']}")
     print(f"Verified Agents: {stats['verified_agents']}")
     print(f"Total Listings: {stats['total_listings']}")
+    
+    print("\n" + "─" * 60)
+    
+    # Test 5: Urgent request broadcast
+    print("\n5️⃣ Broadcasting urgent request...")
+    urgent_result = network.broadcast_urgent_request(
+        "Need 3-bedroom in Ajah ASAP",
+        requester_name="John Doe",
+        requester_contact="08098765432",
+        budget=35000000,
+        location="Ajah"
+    )
+    print(urgent_result['message'])
+    print(f"Notified Agents: {urgent_result['notified_count']}")
 
 
 if __name__ == "__main__":

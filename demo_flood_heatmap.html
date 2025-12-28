@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flood Risk Heatmap - Lagos</title>
+    <style>
+        #map { height: 100vh; width: 100%; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    
+    <script>
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 11,
+                center: {lat: 6.5244, lng: 3.3792},
+                mapTypeId: "roadmap"
+            });
+            
+            const heatmapData = [
+                {location: new google.maps.LatLng(6.4675, 3.5687), weight: 85},
+{location: new google.maps.LatLng(6.4378, 3.473), weight: 45},
+{location: new google.maps.LatLng(6.4281, 3.4219), weight: 25},
+{location: new google.maps.LatLng(6.4549, 3.4316), weight: 20},
+{location: new google.maps.LatLng(6.4969, 3.3558), weight: 50},
+{location: new google.maps.LatLng(9.082, 7.4897), weight: 15},
+{location: new google.maps.LatLng(9.1167, 7.4083), weight: 30},
+{location: new google.maps.LatLng(6.5964, 3.3515), weight: 35},
+{location: new google.maps.LatLng(9.0415, 7.4898), weight: 20},
+{location: new google.maps.LatLng(12.0022, 8.5279), weight: 40},
+{location: new google.maps.LatLng(7.4351, 3.907), weight: 55},
+{location: new google.maps.LatLng(4.8396, 7.0047), weight: 70},
+{location: new google.maps.LatLng(10.483, 7.4415), weight: 35},
+{location: new google.maps.LatLng(6.1921, 6.6989), weight: 76},
+{location: new google.maps.LatLng(6.4474, 7.5144), weight: 45},
+{location: new google.maps.LatLng(4.9517, 8.3417), weight: 60},
+{location: new google.maps.LatLng(5.5637, 5.7773), weight: 75},
+{location: new google.maps.LatLng(5.1166, 7.3667), weight: 80},
+{location: new google.maps.LatLng(9.8965, 8.8583), weight: 25},
+{location: new google.maps.LatLng(7.1475, 3.3619), weight: 48},
+{location: new google.maps.LatLng(7.2571, 5.2058), weight: 52},
+{location: new google.maps.LatLng(7.7333, 8.5333), weight: 72},
+{location: new google.maps.LatLng(9.6139, 6.5569), weight: 38},
+{location: new google.maps.LatLng(7.7667, 4.5667), weight: 54},
+{location: new google.maps.LatLng(5.484, 7.0351), weight: 65},
+{location: new google.maps.LatLng(5.0378, 7.909), weight: 58},
+{location: new google.maps.LatLng(8.8833, 11.3667), weight: 46},
+{location: new google.maps.LatLng(7.7974, 6.7397), weight: 78},
+{location: new google.maps.LatLng(8.4833, 8.5167), weight: 41},
+{location: new google.maps.LatLng(9.2765, 12.4534), weight: 68},
+{location: new google.maps.LatLng(11.7467, 11.9608), weight: 32},
+{location: new google.maps.LatLng(10.2833, 11.1667), weight: 34},
+{location: new google.maps.LatLng(13.0622, 5.2339), weight: 28},
+{location: new google.maps.LatLng(11.7542, 9.3389), weight: 30},
+{location: new google.maps.LatLng(12.4539, 4.1975), weight: 64},
+{location: new google.maps.LatLng(6.5833, 3.9833), weight: 70},
+{location: new google.maps.LatLng(6.4171, 2.8872), weight: 73},
+{location: new google.maps.LatLng(6.6833, 3.25), weight: 56},
+{location: new google.maps.LatLng(6.8333, 3.65), weight: 51},
+{location: new google.maps.LatLng(8.1333, 4.25), weight: 48},
+{location: new google.maps.LatLng(7.6167, 5.2167), weight: 39},
+{location: new google.maps.LatLng(5.525, 7.4833), weight: 62},
+{location: new google.maps.LatLng(6.325, 8.1133), weight: 55},
+{location: new google.maps.LatLng(4.9267, 6.2646), weight: 88},
+{location: new google.maps.LatLng(6.1667, 6.7833), weight: 82},
+{location: new google.maps.LatLng(6.2104, 7.0719), weight: 43},
+{location: new google.maps.LatLng(11.8333, 13.15), weight: 37},
+{location: new google.maps.LatLng(5.4833, 7.0333), weight: 59}
+            ];
+            
+            const heatmap = new google.maps.visualization.HeatmapLayer({
+                data: heatmapData,
+                radius: 50
+            });
+            
+            heatmap.setMap(map);
+        }
+        
+        window.initMap = initMap;
+    </script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&libraries=visualization&callback=initMap" async defer></script>
+</body>
+</html>
