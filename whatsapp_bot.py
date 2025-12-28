@@ -2,6 +2,14 @@
 Naija-Prop-Intel: WhatsApp Bot (Week 4)
 Twilio WhatsApp Business API Integration
 
+COPYRIGHT (C) 2025 AMD SOLUTIONS. ALL RIGHTS RESERVED.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚠️  EDUCATIONAL USE ONLY - Commercial use REQUIRES LICENSE
+📧 Contact: ceo@amdsolutions007.com for commercial licensing
+💼 License Options: $500 (Startup) | $2,500 (Business) | $5,000 (Enterprise)
+🚨 Unauthorized commercial use = Copyright infringement
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 Business Impact:
 - 90% of Nigerians use WhatsApp daily
 - Natural language property queries

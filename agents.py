@@ -2,6 +2,14 @@
 Naija-Prop-Intel: Agent Network & Registration System
 © 2025 AMD Solutions. All Rights Reserved.
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚠️  EDUCATIONAL USE ONLY - Commercial use REQUIRES LICENSE
+📧 Contact: ceo@amdsolutions007.com for commercial licensing
+💼 Licenses: $500 (Startup) | $2,500 (Business) | $5,000 (Enterprise)
+🚨 Unauthorized commercial use = Copyright infringement
+See USAGE_NOTICE.md for full terms
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 Real Estate Agent Network:
 - Agent registration with email/phone verification
 - ₦5,000 verification badge system

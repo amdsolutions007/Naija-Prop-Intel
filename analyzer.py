@@ -2,6 +2,14 @@
 Naija-Prop-Intel: AI Real Estate Intelligence Engine
 © 2025 AMD Solutions. All Rights Reserved.
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚠️  EDUCATIONAL USE ONLY - Commercial use REQUIRES LICENSE
+📧 Contact: ceo@amdsolutions007.com for commercial licensing
+💼 Licenses: $500 (Startup) | $2,500 (Business) | $5,000 (Enterprise)
+🚨 Unauthorized commercial use = Copyright infringement
+See USAGE_NOTICE.md for full terms
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 Property analysis engine with Nigerian-specific intelligence:
 - Flood risk detection (40% weight)
 - Security analysis (30% weight)

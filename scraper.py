@@ -1,6 +1,15 @@
 """
 Naija-Prop-Intel: Property Data Scraper
 Scrapes property listings from Jiji.ng and PropertyPro.ng
+© 2025 AMD Solutions. All Rights Reserved.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚠️  EDUCATIONAL USE ONLY - Commercial use REQUIRES LICENSE
+📧 Contact: ceo@amdsolutions007.com for commercial licensing
+💼 Licenses: $500 (Startup) | $2,500 (Business) | $5,000 (Enterprise)
+🚨 Unauthorized commercial use = Copyright infringement
+See USAGE_NOTICE.md for full terms
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Features:
 - Automated data ingestion from major Nigerian property sites

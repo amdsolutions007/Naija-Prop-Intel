@@ -9,6 +9,18 @@
 
 ---
 
+## ⚠️ IMPORTANT: READ BEFORE USE
+
+**© 2025 AMD Solutions. All Rights Reserved.**
+
+**✅ EDUCATIONAL USE:** You may study, learn, and test this code locally  
+**❌ COMMERCIAL USE:** REQUIRES LICENSE - Contact ceo@amdsolutions007.com  
+**🚨 DEPLOYMENT:** DO NOT deploy to production/marketplace without license
+
+**Full Terms:** [USAGE_NOTICE.md](USAGE_NOTICE.md) | **License Options:** [COMMERCIAL_LICENSE.md](COMMERCIAL_LICENSE.md)
+
+---
+
 ## 🚨 The Problem
 
 Every year in Nigeria, property buyers lose **billions of Naira** to:
